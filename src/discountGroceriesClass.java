@@ -18,13 +18,14 @@ public class discountGroceriesClass {
 		
 		if (priceofGroceries < 10) //WHEN LESS THAN TEN DOLLARS ARE SPENT, NO DISCOUNT APPLIED
 		{ 
+			discountPercent = 0.0;
+			discountDue = 0.0;
 			System.out.println("No discount is given.");
 		}
 		else if (priceofGroceries <=60) //BETWEEN $10 AND $60 INCLUSIVE, 8% DISCOUNT APPLIED 
 		{
 			discountPercent = 00.08;
 			discountDue = discountPercent * priceofGroceries ; 
-			
 		}
 		else if (priceofGroceries <=150) //BETWEEN $61 AND $150 INCLUSIVE, 10% DISCOUNT APPLIED
 		{
@@ -41,8 +42,8 @@ public class discountGroceriesClass {
 			discountPercent = 00.14;
 			discountDue = discountPercent * priceofGroceries ;
 		}
-		System.out.println("New Price with coupon $" + String.format("%.2f", (priceofGroceries - discountDue  ))) ;
-		System.out.println("You just saved "+ discountPercent + "% of your purchase, which amounts to $" + discountDue);
+		System.out.println("You just saved "+ discountPercent + " of your purchase, which amounts to $" +String.format("%.2f",+ discountDue));
+		System.out.println("Price with coupon $" + String.format("%.2f", (priceofGroceries - discountDue  ))) ;
 		System.out.println( "Please exit the program by entering the number 0. To use the program again, enter the number 1: ");
 		exitPlease= in.nextInt();
 		if (exitPlease == 0) {
