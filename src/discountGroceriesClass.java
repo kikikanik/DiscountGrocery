@@ -1,8 +1,7 @@
 import java.util.Scanner;
 
-public class Algorithm {
-
-
+public class discountGroceriesClass {
+	
 	public static void main(String[] args) {
 		double priceofGroceries = 1.00;
 		double discountPercent = 0.0; 
