@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
-public class discountGroceriesClass {
+public class Algorithm {
+
 
 	public static void main(String[] args) {
 		double priceofGroceries = 1.00;
@@ -43,8 +44,16 @@ public class discountGroceriesClass {
 		}
 		System.out.println("New Price with coupon $" + String.format("%.2f", (priceofGroceries - discountDue  ))) ;
 		System.out.println("You just saved "+ discountPercent + "% of your purchase, which amounts to $" + discountDue);
-		System.out.println("Thank you for shopping with us! Have a nice day.");
+		System.out.println( "Please exit the program by entering the number 0. To use the program again, enter the number 1: ");
+		exitPlease= in.nextInt();
+		if (exitPlease == 0) {
+			System.out.println("Program is now closed. Thank you for shopping with us!");
+			java.lang.System.exit(exitPlease);
+		}
+		if (exitPlease == 1) {
+		main(new String[1]);
+		}
 		in.close();
 	}
-
 }
+
