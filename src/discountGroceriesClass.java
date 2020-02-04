@@ -10,8 +10,7 @@ public class discountGroceriesClass {
 		Scanner in = new Scanner(System.in);
 		int exitPlease = 0; 
 		while(exitPlease != 0) {
-			exitPlease = in.nextInt();
-		}
+			
 		System.out.println("Thanks for shopping at Kiki's Groceries!"); //GREETING
 		System.out.println("Please enter the cost of your groceries: "); //INPUT COMPLETE COST OF GROCERIES
 		priceofGroceries= in.nextDouble(); 
@@ -48,12 +47,12 @@ public class discountGroceriesClass {
 		exitPlease= in.nextInt();
 		if (exitPlease == 0) {
 			System.out.println("Program is now closed. Thank you for shopping with us!");
-			java.lang.System.exit(exitPlease);
 		}
 		if (exitPlease == 1) {
 		main(new String[1]);
 		}
 		in.close();
 	}
+}
 }
 
