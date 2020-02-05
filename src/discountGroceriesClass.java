@@ -10,7 +10,9 @@ public class discountGroceriesClass {
 		Scanner in = new Scanner(System.in);
 		int exitPlease = 0; 
 		while(exitPlease != 0) {
+			exitPlease = in.nextInt();
 			
+		}
 		System.out.println("Thanks for shopping at Kiki's Groceries!"); //GREETING
 		System.out.println("Please enter the cost of your groceries: "); //INPUT COMPLETE COST OF GROCERIES
 		priceofGroceries= in.nextDouble(); 
@@ -24,35 +26,32 @@ public class discountGroceriesClass {
 		else if (priceofGroceries <=60) //BETWEEN $10 AND $60 INCLUSIVE, 8% DISCOUNT APPLIED 
 		{
 			discountPercent = 00.08;
-			discountDue = discountPercent * priceofGroceries ; 
 		}
 		else if (priceofGroceries <=150) //BETWEEN $61 AND $150 INCLUSIVE, 10% DISCOUNT APPLIED
 		{
 			discountPercent = 00.10;
-			discountDue = discountPercent * priceofGroceries ;
 		}
 		else if (priceofGroceries <=210) //BETWEEN $151 AND $210 INCLUSIVE, 12% DISCOUNT APPLIED 
 		{	
 			discountPercent = 00.12;
-			discountDue = discountPercent * priceofGroceries ;
 		}
 		else if (priceofGroceries > 210) //MORE THAN $210, 14% DISCOUNT APPLIED
 		{
 			discountPercent = 00.14;
-			discountDue = discountPercent * priceofGroceries ;
 		}
+		discountDue = discountPercent * priceofGroceries ; 
 		System.out.println("You just saved "+ discountPercent + " of your purchase, which amounts to $" +String.format("%.2f",+ discountDue));
 		System.out.println("Price with coupon $" + String.format("%.2f", (priceofGroceries - discountDue  ))) ;
 		System.out.println( "Please exit the program by entering the number 0. To use the program again, enter the number 1: ");
 		exitPlease= in.nextInt();
 		if (exitPlease == 0) {
 			System.out.println("Program is now closed. Thank you for shopping with us!");
+			java.lang.System.exit(exitPlease);
 		}
 		if (exitPlease == 1) {
 		main(new String[1]);
 		}
 		in.close();
 	}
-}
 }
 
