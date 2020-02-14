@@ -14,7 +14,13 @@ public class discountGroceriesClass {
 		System.out.println("Please enter the cost of your groceries: "); //INPUT COMPLETE COST OF GROCERIES
 		priceofGroceries= in.nextDouble(); 
 		
-		if (priceofGroceries < 10) //WHEN LESS THAN TEN DOLLARS ARE SPENT, NO DISCOUNT APPLIED
+		if (priceofGroceries >= 1000) //
+		{
+			discountPercent = 0.0;
+			discountDue = 0.0;
+			System.out.print("No discount given for this price range.");
+		}
+		else if (priceofGroceries < 10) //WHEN LESS THAN TEN DOLLARS ARE SPENT, NO DISCOUNT APPLIED
 		{ 
 			discountPercent = 0.0;
 			discountDue = 0.0;
@@ -39,7 +45,7 @@ public class discountGroceriesClass {
 		discountDue = discountPercent * priceofGroceries ; 
 		System.out.println("You just saved "+ discountPercent + " of your purchase, which amounts to $" +String.format("%.2f",+ discountDue));
 		System.out.println("Price with coupon $" + String.format("%.2f", (priceofGroceries - discountDue  ))) ;
-		System.out.println( "If you would like to exit, enter 'Exit': ") ;
+		System.out.println( "If you would like to exit, enter 'Exit', or press any other key to start again. ") ;
 		// exitPlease= in.nextInt();
 		if (in.next().equals("Exit")) {
 			System.out.println("Program is now closed. Thank you for shopping with us!");
